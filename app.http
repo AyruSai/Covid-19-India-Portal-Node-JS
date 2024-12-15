@@ -1,0 +1,72 @@
+// API 1 Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@12"
+}
+
+###
+
+// API 2 States
+GET http://localhost:3000/states/
+Authorization: Bearer 
+
+###
+
+// API 3 State
+GET http://localhost:3000/states/8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+###
+
+// API 4 districts
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+} 
+###
+
+// API 5 GET district
+GET http://localhost:3000/districts/322/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+###
+
+// API 6 DELETE district
+DELETE http://localhost:3000/districts/767/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+###
+
+// API 7 PUT update district
+PUT http://localhost:3000/districts/766/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+
+// API 8 GET stats
+GET http://localhost:3000/states/2/stats
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzM0Mjc4Mjg1fQ.ZJuozbIERrrM0t-YUqduQObzyAYP5oEnFABXchy1TSc
+
+###
